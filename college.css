@@ -1,0 +1,45 @@
+/* Make the sidebar responsive */
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 0.3s;
+}
+
+/* For page content when sidebar is collapsed */
+#wrapper.toggled #sidebar {
+    margin-left: -250px;
+}
+
+/* Style the menu button */
+#menu-toggle {
+    font-size: 1.5rem;
+}
+
+/* Style cards */
+.card {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+/* Adjust content margin when sidebar is visible */
+#wrapper.toggled #page-content-wrapper {
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        display: none;
+    }
+    #wrapper.toggled #sidebar {
+        display: block;
+    }
+    .navbar {
+        margin-left: 0;
+    }
+}
